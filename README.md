@@ -1,6 +1,8 @@
 # TimezoneLatLon
 The TimezoneLatLon gem allows users to search for the timezone contained by any latitude/longitude. 
 
+Rubygems page: [timezone_lat_lon](https://rubygems.org/gems/timezone_lat_lon)
+
 This gem was inspired by the NearestTimeZone gem which is currently unmaintained. 
 
 ## Installation
