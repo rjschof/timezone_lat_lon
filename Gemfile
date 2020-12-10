@@ -15,3 +15,5 @@ gem "byebug", "~> 11.1"
 gem "kdtree", "~> 0.4"
 
 gem "rspec", "~> 3.10"
+
+gem "simplecov", "~> 0.20.0"
