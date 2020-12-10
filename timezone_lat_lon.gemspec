@@ -4,11 +4,11 @@ Gem::Specification.new do |s|
     s.name        = 'timezone_lat_lon'
     s.version     = TimezoneLatLon::VERSION
     s.date        = '2020-12-09'
-    s.summary     = 'Find timezones by latitude and longitude.'
-    s.description = 'Find timezones by latitude and longitude.'
+    s.summary     = 'Timezone lookup by latitude and longitude'
+    s.description = 'Utilities for looking up the timezone contained by a latitude and longitude.'
     s.authors     = ['Robert J. Schofield']
     s.email       = 'rjschofield96@gmail.com'
-    s.files       = Dir['lib/**/*.rb', 'data/**/**', 'scripts/**', 'LICENSE.md', 'README.md']
+    s.files       = Dir['lib/**/*.rb', 'data/timezones/**/**', 'spec/*.rb', 'LICENSE.md', 'README.md']
     s.homepage    = 'https://github.com/rjschof/timezone_lat_lon'
     s.license     = 'MIT'
 
@@ -17,6 +17,4 @@ Gem::Specification.new do |s|
     s.add_runtime_dependency('rgeo-geojson', '~> 2.1')
     s.add_runtime_dependency('rgeo-shapefile', '~> 3.0')
     s.add_runtime_dependency('tzinfo', '~> 2.0')
-
-    s.add_development_dependency('byebug', '~> 11.1')
   end

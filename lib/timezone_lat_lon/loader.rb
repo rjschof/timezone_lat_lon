@@ -6,6 +6,8 @@ module TimezoneLatLon
   class Loader
     attr_accessor :config, :timezone_data
 
+    CACHE_FILE_NAME = 'time_zones.cache'
+
     def initialize(config = {})
       @config = {
         geojson_filename: 'combined.json'
@@ -17,10 +19,10 @@ module TimezoneLatLon
     private
 
     def load_data
-      begin
-        timezone_data_path = File.expand_path(File.join('..', '..', 'data', 'time_zones.dump'), __dir__)
-        @timezone_data = Marshal.load(File.open(timezone_data_path).read)
-      rescue => exception
+      timezone_dump_file  = File.expand_path(File.join('..', '..', 'data', CACHE_FILE_NAME), __dir__)
+      if File.exists?(timezone_dump_file)
+        @timezone_data = Marshal.load(File.open(timezone_dump_file).read)
+      else # timezone_dump_file does not exist!
         self.load_data_from_geojson
       end
     end
@@ -40,6 +42,11 @@ module TimezoneLatLon
           geometry: feature.geometry,
           attributes: attributes,
         }
+      end
+
+      timezone_dump_file = File.expand_path(File.join('..', '..', 'data', CACHE_FILE_NAME), __dir__)
+      File.open(timezone_dump_file, "w") do |f|
+        f.write(Marshal.dump(@timezone_data))
       end
     end
   end

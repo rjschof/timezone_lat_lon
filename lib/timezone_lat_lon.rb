@@ -5,10 +5,8 @@ module TimezoneLatLon
   class << self
     include Search
 
-    @@loader = TimezoneLatLon::Loader.new(geojson_filename: 'combined-compressed.json')
-
     def loader
-      return @@loader
+      @@loader ||= TimezoneLatLon::Loader.new(geojson_filename: 'combined-compressed.json')
     end
   end
 end
