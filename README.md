@@ -5,6 +5,9 @@ Rubygems page: [timezone_lat_lon](https://rubygems.org/gems/timezone_lat_lon)
 
 This gem was inspired by the NearestTimeZone gem which is currently unmaintained. 
 
+## Compatibility
+Currently, this gem only works with Ruby 2.7. This will change in the future. 
+
 ## Installation
 ### With Bundler
 Add the following line to your `Gemfile`:
