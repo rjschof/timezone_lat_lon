@@ -8,6 +8,15 @@ This gem was inspired by the NearestTimeZone gem which is currently unmaintained
 ## Compatibility
 Currently, this gem only works with Ruby 2.7. This will change in the future. 
 
+## Dependencies
+### CentOS / RHEL
+```bash
+yum install geos geos-devel swig
+```
+
+### Other platforms
+I'll add more guides for other platforms as soon as I get a chance to test them out. For now, just make sure you have the `geos` package installed, and any of its dependencies: `geos-devel` and `swig` or equivalent packages for your platform. 
+
 ## Installation
 ### With Bundler
 Add the following line to your `Gemfile`:
