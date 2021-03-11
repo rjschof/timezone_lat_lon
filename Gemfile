@@ -7,7 +7,7 @@ source "https://rubygems.org"
 gem "rgeo-shapefile"
 gem "rgeo-geojson"
 
-gem "oj", "~> 3.10"
+gem "oj", "~> 3.11"
 
 gem "tzinfo", "~> 2.0"
 
